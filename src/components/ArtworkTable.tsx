@@ -72,7 +72,7 @@ const ArtworkTable: React.FC = () => {
     const fetchData = async (currentPage: number) => {
         setLoading(true);
         try {
-            const response = await fetchArtworks(currentPage);
+            const response = await fetchArtworks(currentPage, rows);
             setArtworks(response.data);
             setTotalRecords(response.pagination.total);
         } catch (error) {
